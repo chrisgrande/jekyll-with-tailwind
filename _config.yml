@@ -1,0 +1,21 @@
+locale                   : "en"
+title                    : "Site Name"
+
+collections:
+  press:
+    sort_by: date
+    output: true
+  donations:
+    sort_by: year
+    output: true
+
+exclude:
+ - package-lock.json
+ - package.json
+ - postcss.config.js
+ - tailwind.config.js
+ - .nova
+ 
+permalink: pretty
+
+future: true
