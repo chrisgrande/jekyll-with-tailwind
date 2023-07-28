@@ -1,7 +1,7 @@
 services:
   - type: web
-	name: site-name-here
-	env: static
-	buildCommand: bundle exec jekyll build
-	staticPublishPath: _site
-	pullRequestPreviewsEnabled: true
+    name: site-name-here
+    env: static
+    buildCommand: bundle exec jekyll build
+    staticPublishPath: _site
+    pullRequestPreviewsEnabled: true
