@@ -1,9 +1,19 @@
 {
   "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\nbundle\nnpm install"
+    },
+    "clean" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\nbundle exec jekyll clean"
+    },
     "run" : {
       "enabled" : true,
-      "script" : "#!\/bin\/sh\nbundle exec jekyll serve"
+      "script" : "#!\/bin\/sh\nbundle exec jekyll serve --config _config.yml,_config_dev.yml"
     }
   },
-  "openLogOnRun" : "start"
+  "buildBeforeRunning" : true,
+  "openLogOnRun" : "start",
+  "persistent" : true
 }
