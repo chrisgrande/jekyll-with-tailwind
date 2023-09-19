@@ -2,7 +2,7 @@
   "actions" : {
     "build" : {
       "enabled" : true,
-      "script" : "#!\/bin\/sh\nbundle\nnpm install"
+      "script" : "#!\/bin\/sh\ngem install bundler\nbundle install\nnpm install"
     },
     "clean" : {
       "enabled" : true,
