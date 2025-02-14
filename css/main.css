@@ -1,10 +1,11 @@
 ---
 ---
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 
 @layer utilities {
 	
 }
+
+
+@config "../../tailwind.config.js";
