@@ -23,6 +23,7 @@ help:
 setup: gems npm
 
 gems:
+	bundle config set --local path vendor/bundle
 	bundle install
 
 npm:
