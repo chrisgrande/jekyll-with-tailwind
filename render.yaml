@@ -2,6 +2,6 @@ services:
   - type: web
     name: site-name-here
     runtime: static
-    buildCommand: bundle install && npm ci && bundle exec jekyll build
+    buildCommand: bundle install --without development test && npm ci && bundle exec jekyll build
     staticPublishPath: _site
     pullRequestPreviewsEnabled: true

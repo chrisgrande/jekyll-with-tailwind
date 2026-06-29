@@ -5,9 +5,8 @@ _site/
 .jekyll-metadata
 
 
-### Bundler (vendor install; keep path in tracked config)
-.bundle/*
-!.bundle/config
+### Bundler (local vendor install; path set via `make gems`)
+.bundle/
 vendor/
 
 
