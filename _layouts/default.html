@@ -1,35 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="{{ site.locale | default: 'en' }}" class="scroll-smooth">
   <head>
-	<meta charset="utf-8" />
-	<meta name='viewport' content="initial-scale=1, viewport-fit=cover" />
-	<meta name="Author" content="" />
-	<meta
-	  name="Keywords"
-	  content=""
-	/>
-	<meta name="Copyright" content="" />
-	<meta
-	  name="Description"
-	  content=""
-	/>
-	<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title}}</title>
-	<link href="/css/main.css" rel="stylesheet">
-	<link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
-	<link rel="manifest" href="/fav/site.webmanifest">
-	<link rel="mask-icon" href="/fav/safari-pinned-tab.svg" color="#5bbad5">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ page.description | default: site.description | escape }}" />
+    <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+    <link href="{{ '/css/main.css' | relative_url }}" rel="stylesheet" />
   </head>
-  
-  <body class="">
-	
-	{% include nav.html %}
-	
-	{{ content }}
-  
-	{% include footer.html %}
 
+  <body class="min-h-screen bg-white text-gray-900 antialiased">
+    {% include nav.html %}
+
+    <main>
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
   </body>
-  
 </html>
