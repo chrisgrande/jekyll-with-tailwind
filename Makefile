@@ -4,7 +4,7 @@
 
 RUBY_VERSION := $(shell cat .ruby-version 2>/dev/null)
 
-.PHONY: help setup gems npm build serve clean distclean ruby-install ruby-check
+.PHONY: help setup gems npm build serve serve-dev clean distclean ruby-install ruby-check
 
 help:
 	@echo "Project-local setup (gems in ./vendor/bundle, npm in ./node_modules)"
@@ -16,6 +16,7 @@ help:
 	@echo "  make ruby-check   Show expected vs current Ruby version"
 	@echo "  make build        bundle exec jekyll build"
 	@echo "  make serve        bundle exec jekyll serve"
+	@echo "  make serve-dev    bundle exec jekyll serve with _config_dev.yml"
 	@echo "  make clean        Remove _site and Jekyll cache"
 	@echo "  make distclean    clean + remove vendor/bundle and node_modules"
 
@@ -46,6 +47,9 @@ build:
 
 serve:
 	bundle exec jekyll serve
+
+serve-dev:
+	bundle exec jekyll serve --config _config.yml,_config_dev.yml
 
 clean:
 	rm -rf _site .jekyll-cache

@@ -1,21 +1,30 @@
-locale                   : "en"
-title                    : "Site Name"
+locale: en
+title: Site Name
+description: A short description of your site.
+url: "" # e.g. https://example.com — used for canonical URLs and feeds
+baseurl: ""
 
-collections:
-  press:
-    sort_by: date
-    output: true
-  donations:
-    sort_by: year
-    output: true
+permalink: pretty
+future: true
+
+# Uncomment and customize collections for your project:
+# collections:
+#   posts:
+#     output: true
+#     permalink: /blog/:title/
 
 exclude:
- - package-lock.json
- - package.json
- - postcss.config.js
- - tailwind.config.js
- - .nova
- 
-permalink: pretty
-
-future: true
+  - package-lock.json
+  - package.json
+  - postcss.config.js
+  - node_modules
+  - .nova
+  - Gemfile
+  - Gemfile.lock
+  - Makefile
+  - README.md
+  - render.yaml
+  - .gitignore
+  - .ruby-version
+  - .node-version
+  - vendor

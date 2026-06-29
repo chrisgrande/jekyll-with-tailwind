@@ -1,10 +1,20 @@
 {
+  "name": "jekyll-tailwind-template",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "bundle exec jekyll build",
+    "serve": "bundle exec jekyll serve",
+    "serve:dev": "bundle exec jekyll serve --config _config.yml,_config_dev.yml"
+  },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.11",
-    "@tailwindcss/postcss": "^4.2.2",
-    "@tailwindcss/typography": "^0.5.19",
-    "postcss": "^8.5.9",
+    "@tailwindcss/postcss": "^4.3.2",
+    "@tailwindcss/typography": "^0.5.20",
+    "postcss": "^8.5.16",
     "postcss-cli": "^11.0.1",
-    "tailwindcss": "^4.2.2"
+    "tailwindcss": "^4.3.2"
   }
 }

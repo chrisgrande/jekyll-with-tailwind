@@ -2,10 +2,17 @@
 ---
 @import "tailwindcss";
 
+/* Scan Jekyll sources so classes in layouts, includes, and pages are not purged. */
+@source "../**/*.{html,md,liquid,markdown}";
 
-@layer utilities {
-	
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-primary: oklch(0.55 0.2 264);
+  --color-primary-dark: oklch(0.45 0.2 264);
 }
 
-
-@config "../../tailwind.config.js";
+@layer utilities {
+  /* Add project-specific utilities here. */
+}
